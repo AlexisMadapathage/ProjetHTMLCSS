@@ -8,8 +8,18 @@
     align-items: center;
 }
 
+:root {
+    --main-color: #0065FC;
+    --main-bg-color: #F2F2F2;
+    --filter-bg-color: #DEEBFF;
+}
+
+.fa-solid {
+    color: var(--main-color);
+}
+
 .logo {
-    width: 5%;
+    width: 5%;;
 }
 
 .menu li { 
@@ -19,15 +29,17 @@ margin-left: 20px;
 
 .menu :hover {
 color: #0065FC;
+border-top: 2px #0065FC solid;
+padding-top: 20px;
 }
 
 .header-title {
     text-align: left;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .header-title h1 {
-    font-size: 28px;
+    font-size: 20px;
     margin-bottom: 5px;
 }
 
@@ -40,39 +52,6 @@ color: #0065FC;
 .header-search {
     display: flex;
     margin-bottom: 2%;
-    border: #F2F2F2;
-}
-
-.button-container {
-    display: flex;
-    margin-bottom: 2%;
-    justify-content: flex-start;
-}
-
-:root {
-    --main-color: #0065FC;
-    --main-bg-color: #F2F2F2;
-    --filter-bg-color: #DEEBFF;
-}
-
-.fa-solid {
-    color: var(--main-color);
-}
-
-.fa-location-dot {
-    color:black;
-    background-color: #F2F2F2;
-    border-radius: 10px 0px 0px 10px;
-    padding: 15px;
-}
-
-.text {
-    color: inherit;
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 15px;
-    border:#F2F2F2
 }
 
 .submit {
@@ -84,9 +63,68 @@ color: #0065FC;
     font-size: 16px;
 }
 
+.fa-location-dot {
+    color:black;
+    background-color: #F2F2F2;
+    border-radius: 10px 0px 0px 10px;
+    padding: 15px;
+}
+
+.text {
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px;
+    border:#F2F2F2
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 2%;
+    justify-content: flex-start;
+    border: none;
+}
+
+.description, .button-container button {
+    margin: 0;
+    padding: 0;
+}
+
 .description {
     font-size: 16px;
     font-weight: bold;
+}
+
+.button-container button {
+    display: flex;
+    gap: 8px;
+    background-color: white;
+    border : 2px #F2F2F2 solid;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    padding : 10px 15px;
+}
+
+.button-container button:hover {
+    background-color: #F2F2F2;
+}
+
+.info {
+    display: flex;
+    font-size: 15px;
+    font-weight: lighter;
+    gap: 10px;
+    color:#555
+}
+
+.fa-circle-info {
+    color:#0065FC;
+    background-color: white;
 }
 
 body {
@@ -135,6 +173,7 @@ a {
 }
 
 /****** Hebergements And Populaires ***********/
+
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
@@ -150,6 +189,45 @@ a {
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    justify-content: flex-start;
+}
+
+.hebergement-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hebergement-card {
+    display: flex;
+    box-sizing: border-box;
+    flex: 0 1 calc(33.333% - 20px);
+    flex-direction: column;
+    margin-top: 33px;
+}
+
+.hebergement-card .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hebergement-card img{
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.hebergement-card .card-content {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
 }
 
 /****** Populaires ***********/
