@@ -24,23 +24,31 @@
     padding-top: 20px;
 }
 
-.entete-menu {
-    border:none;
-    box-sizing: border-box;
+.entete-menu { 
+display: flex;
+gap: 20px;
+list-style:none;
+padding: 0;
+margin: 0;
 }
 
-.entete-menu li { 
-display: inline;
+.entete-menu li {
+    display: inline;
 }
 
 .list-menu {
-    width: 10%;
+    text-decoration: none;
+    color: black;
+    padding: 15px 0;
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    border-top: 2px solid transparent;
 }
 
-.entete-menu :hover {
+.list-menu:hover {
 color: #0065FC;
-border-top: 2px #0065FC solid;
-padding-top: 20px;
+border-top: 2px solid #0065FC;
 }
 
 .main-title {
@@ -105,7 +113,7 @@ padding-top: 20px;
     font-weight: bold;
 }
 
-.button-container button {
+.button {
     display: flex;
     gap: 8px;
     background-color: white;
@@ -117,7 +125,7 @@ padding-top: 20px;
     padding : 10px 15px;
 }
 
-.button-container button:hover {
+.button:hover {
     background-color: #F2F2F2;
 }
 
@@ -127,11 +135,6 @@ padding-top: 20px;
     font-weight: lighter;
     gap: 10px;
     color:#555
-}
-
-.fa-circle-info {
-    color:#0065FC;
-    background-color: white;
 }
 
 body {
@@ -174,7 +177,7 @@ a {
 }
 
 .euro {
-    font-weight: 700;
+    font-weight: none;
 }
 
 .neutral-star {
@@ -322,7 +325,6 @@ a {
     font-size: 16px;
     text-align: left;
     padding: 10px 5px;
-    height: 2%;
 }
 
 /***********Footer**********/
@@ -355,6 +357,51 @@ a {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+    .entete-menu {
+        font-size: 14px;
+    }
+    
+    .main-title {
+        font-size: 18px;
+        padding-top: 15px;
+    }
+
+    .subtitle {
+        font-size: 12px;
+        padding-bottom: 15px;
+    }
+
+    .form-search {
+        width: 40%;
+        height: 40px;
+    }
+
+    .fa-location-dot {
+        padding: 12px;
+    }
+
+    .search-ville {
+        font-size: 14px;
+    }
+
+    .submit {
+        font-size: 14px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .button {
+        font-size: 14px;
+    }
+
+    .info {
+        font-size: 12px;
+    }
+
+    
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -384,6 +431,36 @@ a {
 
     .populaires-cards .card-subtitle {
         font-size: 13px;
+    }
+
+    .activites {
+        width: 100%;
+    }
+
+    .activites-card .cartes {
+        height: auto;
+    }
+
+    .activites-card .cartes-title {
+        font-size: 14px;
+        text-align: center;
+        margin-top: 0px;
+        white-space: normal;
+    }
+
+    .pied {
+        flex-direction: row;
+        gap: 120px;
+    }
+
+    .footer-group h4 {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    .footer-group .footer-text {
+        font-size: 12px;
+        white-space: nowrap;
     }
 }
 
