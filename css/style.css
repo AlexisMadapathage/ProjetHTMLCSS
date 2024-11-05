@@ -101,11 +101,18 @@ border-top: 2px solid #0065FC;
 
 .button-container {
     display: flex;
-    align-items: center;
+    flex-direction:row;
     gap: 10px;
     justify-content: flex-start;
+    align-items: center;
     border: none;
     margin-top: 20px;
+}
+
+.filter-button {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
 
 .description {
@@ -358,6 +365,17 @@ a {
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
 
+    .main-container {
+        margin: 0;
+        padding: 30px;
+        width: 100%;
+        align-content: center;
+    }
+
+    .logo {
+        width: 10%;
+    }
+    
     .entete-menu {
         font-size: 14px;
     }
@@ -389,8 +407,19 @@ a {
         font-size: 14px;
     }
 
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .description {
         font-size: 14px;
+    }
+
+    .filter-button {
+        display: flex;
+        flex-direction: row;
     }
 
     .button {
@@ -434,7 +463,7 @@ a {
     }
 
     .activites {
-        width: 100%;
+        width: 90%;
     }
 
     .activites-card .cartes {
@@ -466,5 +495,181 @@ a {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    
+    .main-container {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        align-content: center;
+    }    
+    
+    .main-container nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 20%;
+    } 
+    
+    .entete-menu {
+        font-size: 14px;
+        border-bottom: 1px solid lightgrey;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .main-title {
+        font-size: 25px;
+        padding: 0px 15px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+        padding: 0px 15px 15px 15px;
+    }
+
+    .form-search {
+        width: 90%;
+        height: 40px;
+        margin: 15px 15px;
+    }
+
+    .search-ville {
+        font-size: 14px;
+    }
+
+    .submit {
+        font-size: 14px;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 15px;
+    }
+
+    .description {
+        font-size: 14px;
+        margin-bottom: 10px;
+        align-self: flex-start;
+    }
+
+    .filter-button {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-between;
+    }
+    
+    .button {
+        font-size: 14px;
+        flex: 1 1 calc(50% - 10px);
+        padding: 10px;
+        box-sizing: border-box; 
+    }
+
+    .info {
+        font-size: 12px;
+        padding: 0px 15px;
+    }
+
+    
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+    }
+
+    .hebergements-and-populaires .hebergements {
+        background-color: white; 
+    }
+
+    .hebergements {
+        width: 100%;
+        background-color: none;
+    }
+
+    .hebergement-card {
+        flex-direction: column;
+        margin: 0px 10px;
+    }
+
+    .hebergement-card .card {
+        width: 100%;
+    }
+
+    .hebergement-card .more {
+        padding-top: 20px;
+    }
+
+    .populaires {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .populaires-cards a {
+        width: 100%;
+    }
+
+    .populaires-cards .card-title {
+        font-size: 14px;
+    }
+
+    .populaires-cards .card-subtitle {
+        font-size: 13px;
+    }
+
+    .activites {
+        width: 100%;
+        margin: 30px
+
+    }
+
+    .activites-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .activites-title {
+        font-size: 22px;
+        margin-left: 10px;
+    }
+
+    .activites-card .cartes {
+        height: 200px;
+        width: 85%;
+    }
+
+    .activites-card .cartes-title {
+        font-size: 14px;
+        text-align: center;
+        margin-top: 0px;
+        white-space: normal;
+    }
+
+    .pied {
+        flex-direction: column;
+        gap: 120px;
+        margin: 0;
+    }
+
+    .footer-group h4 {
+        font-size: 14px;
+    }
+
+    .footer-group .footer-text {
+        font-size: 12px;
+    }
 }
