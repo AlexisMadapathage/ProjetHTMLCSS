@@ -21,7 +21,7 @@ body {
     width: 95%;
     max-width: 1440px;
     box-sizing: border-box;
-    margin: auto
+    margin: auto;
 }
 
 .header,
@@ -38,29 +38,28 @@ nav {
 
 .entete-menu {
     display: flex;
-    gap: 30px;
     margin: 0;
-    width: 20%;
-}
-
-.entete-menu li {
-    display: inline;
-    width: 50%;
+    width: 21%;
 }
 
 .list-menu {
-    text-decoration: none;
-    color: black;
-    padding: 15px 0;
-    display: inline-block;
-    width: 120px;
-    text-align: center;
+    display: inline;
+    width: 50%;
     border-top: 2px solid transparent;
 }
 
 .list-menu:hover {
-    color: #0065FC;
     border-top: 2px solid #0065FC;
+}
+
+.list-point {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.list-point:hover {
+    color: #0065FC;
 }
 
 .main-title {
@@ -143,8 +142,8 @@ nav {
     border-radius: 20px;
     font-size: 16px;
     font-weight: bold;
-    color: black;
     padding: 10px 15px;
+    max-width: 160px;
 }
 
 .button:hover {
@@ -372,7 +371,6 @@ a {
     .main-container {
         width: 90%;
         box-sizing: border-box;
-        padding: 15px 10px;
         align-content: center;
     }
 
@@ -385,25 +383,26 @@ a {
         display: flex;
         justify-content: space-between;
         width: 30%;
-        gap: 30%;
     }
 
     .list-menu:hover {
-        color: blue;
         border-top: 2px solid #0065FC;
+    }
+
+    .list-point:hover {
+        color: blue;
     }
 
     .list-menu {
         display: flex;
-        text-align: end;
-        width: 100%;
+        justify-content: center;
+        width: 50%;
     }
 
     .main-title {
         font-size: 15px;
         padding-top: 15px;
     }
-
 
     .subtitle {
         font-size: 12px;
@@ -452,6 +451,7 @@ a {
 
     .button {
         font-size: 14px;
+        max-width: 140px;
     }
 
     .info {
@@ -554,29 +554,18 @@ a {
         border-bottom: 1px solid lightgrey;
     }
 
-    .entete-menu li {
-        display: flex;
-        flex: 1;
-        justify-content: center;
-        width: 50%;
-        box-sizing: border-box;
-    }
-
     .list-menu {
-        text-decoration: none;
-        color: black;
-        width: 70%;
-        text-align: center;
+        box-sizing: border-box;
         font-size: 14px;
     }
 
-    .entete-menu li:hover {
+    .list-menu:hover {
+        border-top: none;
         border-bottom: 2px solid #0065FC;
     }
 
     .list-menu:hover {
-        color: #0065FC;
-        border-top: none;
+        color: #0065FC; 
     }
 
 
@@ -604,7 +593,8 @@ a {
         background-color: #F2F2F2;
         border-radius: 10px 0px 0px 10px;
         padding: 12px 15px 12px 20px;
-        width: 9%
+        width: 6%;
+        max-width: 16px;
     }
 
     .search-ville {
@@ -632,7 +622,8 @@ a {
         width: 18%;
         padding: 15px 10px 15px 20px;
         border-radius: 10px 10px;
-        box-shadow: 0px 5px 2px rgba(0, 0, 0);
+        box-shadow: 0px 2px 3px rgba(0, 0, 0);
+        max-width: 55px;
     }
 
     .submit .fa-magnifying-glass {
@@ -671,8 +662,8 @@ a {
     .button {
         font-size: 14px;
         flex: 1 1 calc(50% - 10px);
-        padding: 10px;
         box-sizing: border-box;
+        max-width: 140px;
     }
 
     .info {
@@ -683,11 +674,15 @@ a {
 
     .hebergements-and-populaires {
         flex-direction: column-reverse;
-        margin: 10px 0px
+        margin: 0;
     }
 
     .hebergements-and-populaires .hebergements {
         background-color: white;
+    }
+
+    .hebergements-and-populaires section {
+        border-radius: 0px;
     }
 
     .hebergements {
@@ -762,6 +757,7 @@ a {
         flex-direction: column;
         gap: 50px;
         margin: 0;
+        padding-bottom: 20px;
     }
 
     .footer-group h4 {
