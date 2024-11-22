@@ -191,7 +191,7 @@ a {
 }
 
 .euro {
-    font-weight: none;
+    font-weight: normal;
 }
 
 .neutral-star {
@@ -307,8 +307,8 @@ a {
 }
 
 .activites-link {
-    margin: none;
-    padding: none;
+    margin: 0;
+    padding: 0;
 }
 
 .activites-card {
@@ -687,7 +687,6 @@ a {
 
     .hebergements {
         width: 100%;
-        background-color: none;
     }
 
     .hebergement-card {
